@@ -35,6 +35,7 @@ namespace gcgcg
     int mouseX, mouseY;   //TODO: achar método MouseDown para não ter variável Global
     private bool mouseMoverPto = false;
     private Retangulo obj_Retangulo;
+    private Circulo obj_Circulo;
 
     Ponto4D ponto;
 
@@ -51,16 +52,13 @@ namespace gcgcg
       Console.WriteLine(" --- Ajuda / Teclas: ");
       Console.WriteLine(" [  H     ] mostra teclas usadas. ");
 
-      for (int i = 1; i <= 72; i++) {
-
-        ponto = CG_Biblioteca.Matematica.GerarPtosCirculo(i * 5, 100);
-
-        objetoId = Utilitario.charProximo(objetoId);
-        obj_Retangulo = new Retangulo(objetoId, null, new Ponto4D(ponto.X, ponto.Y, 0), new Ponto4D(ponto.X + 4, ponto.Y + 4, 0));
-        obj_Retangulo.ObjetoCor.CorR = 255; obj_Retangulo.ObjetoCor.CorG = 255; obj_Retangulo.ObjetoCor.CorB = 0;
-        objetosLista.Add(obj_Retangulo);
-
-      }
+      objetoId = Utilitario.charProximo(objetoId);
+      obj_Circulo = new Circulo(objetoId, null, new Ponto4D(0, 0), 100);
+      obj_Circulo.ObjetoCor.CorR = 255; obj_Circulo.ObjetoCor.CorG = 255; obj_Circulo.ObjetoCor.CorB = 0;
+      obj_Circulo.PrimitivaTipo = PrimitiveType.Points;
+      obj_Circulo.PrimitivaTamanho = 5;
+      objetosLista.Add(obj_Circulo);
+      objetoSelecionado = obj_Circulo;
 
 #if CG_Privado
       objetoId = Utilitario.charProximo(objetoId);
