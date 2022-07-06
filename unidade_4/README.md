@@ -14,3 +14,15 @@ Cada jogador coloca uma das suas peças em qualquer abertura no topo da grade. J
 - No modelo utilizaremos fichas 3d em formato de cilindro  
 - Animação da ficha caindo até a parte inferior do tabuleiro  
 - A camera deve se movimentar no ambiente
+
+## Avaliação final
+
+Positivo:
+- seguiram as definições do trabalho usando o código das atividades anterior.
+- criaram uma classe nova, Ficha.cs, seguindo modelo do Retangulo.cs e usando o método Cubo para representar as fichas.
+- usaram transformações 3D.
+- usaram a câmera 3D.
+
+Negativo:
+- não fizeram a representação no "tabuleiro" só das peças Fichas.
+- não aplicaram a iluminação e nem textura.
